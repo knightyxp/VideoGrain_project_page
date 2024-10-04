@@ -26,7 +26,7 @@
 
 
   <title>ST-Modulator: Modulating Space-Time Attention for Multi-Grained Video Editing</title>
-  <link rel="icon" type="image/x-icon" href="static/images/project_page.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/ST_Modulator.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -94,26 +94,28 @@
   <div class="container is-max-desktop">
     <div class="hero-body is-centered has-text-centered">
       <p style="background-color:lightgoldenrodyellow">
-        📕 <strong>TL;DR</strong>: EVA can achieves accurate <a style="color: red; font-weight: bold;">multi-attribute editing</a> for both single and <a style="color: purple; font-weight: bold;">multi-object</a> scenarios in human-centric complex motion
-        <a style="color: green; font-weight: bold;">without any training</a>, by leveraging pre-trained <a style="color: blue; font-weight: bold;">text-image</a> models.         
+        📕 <strong>TL;DR</strong>: A zero-shot method for class-level, instance-level, and part-level video editing     
       </p>
     </div>
   </div> 
 </section>
 <!-- End teaser video -->
 
+
 <!-- Teaser video-->
+ <!-- 
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
         <source src="static/videos/EVA_supply_video.mp4" type="video/mp4">
       </video>
     </div>
   </div>
 </section>
+-->
 <!-- End teaser video -->
+  
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -123,17 +125,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Current diffusion-based video editing primarily focuses on local editing (object/background editing) or global style editing by utilizing various dense correspondences. 
-            However, these methods often fail to accurately edit the foreground and background simultaneously while preserving the original layout.
-            We find that the crux of the issue stems from the imprecise distribution of attention weights across designated regions, including inaccurate text-to-attribute control and attention leakage.
-          </p>
-          <p>
-            To tackle this issue, we introduce EVA, a zero-shot and multi-attribute video editing framework tailored for human-centric videos with complex motions. 
-            We incorporate a Spatial-Temporal Layout-Guided Attention mechanism that leverages the intrinsic positive and negative correspondences of cross-frame diffusion features.
-            To avoid attention leakage, we utilize these correspondences to boost the attention scores of tokens within the same attribute across all video frames while limiting interactions between tokens of different attributes in the self-attention layer.
-            For precise text-to-attribute manipulation, we use discrete text embeddings focused on specific layout areas within the cross-attention layer.
-            Benefiting from the precise attention weight distribution, EVA can be easily generalized to multi-object editing scenarios and achieves accurate identity mapping.
-            Extensive experiments demonstrate EVA achieves state-of-the-art results in real-world scenarios.
+            Recent advancements in diffusion models have significantly improved video generation and editing capabilities. However, multi-grained video editing, which encompasses class-level, instance-level, and part-level modifications, remains a formidable challenge.
+            The major difficulties in multi-grained editing include semantic misalignment of text-to-region control and feature coupling within the diffusion model.
+            To address these difficulties, we present ST-Modulator, a zero-shot approach that modulates space-time (cross- and self-) attention mechanisms to achieve fine-grained control over video content.
+            We enhance text-to-region control by amplifying each local prompt's attention to its corresponding spatial-disentangled region while minimizing interactions with irrelevant areas in cross-attention.
+            Additionally, we improve feature separation by increasing intra-region awareness and reducing inter-region interference in self-attention.
+            Extensive experiments demonstrate our method achieves state-of-the-art performance in real-world scenarios.
           </p>
         </div>
       </div>
@@ -151,36 +148,18 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Method</h2>
           <div class="content has-text-justified">
-        
-          <strong>Intrinsic Cross-frame DIFT feature correspondence :</strong> We observe that, we can unsupervised identify intra/inter attributes using cross-frame DIFT correspondence.
-          For each query token, we can:
-          <ol>
-           <li> Maximizing the cosine cross-frame DIFT similarity to identify its corresponding positive pair in other frames (sharing the same attribute). 
-           <li> Minimizing this similarity to find its negative pair (across different attributes).
-          </ol>
-          
-          <div class="is-centered has-text-centered video-no-container">
-            <video preload="auto" poster="" autoplay controls muted loop width="800px" outline="0px"> 
-              <source src="static/videos/cross-frame-dift-new.mp4"
-              type="video/mp4">
-            </video>
-          </div>
-          <hr>
-          <div style="text-align: left;">
-            <strong>EVA pipeline:</strong>
-          </div>
           <table width="1200" border="0">
             <tbody>
-              <img src="static/images/framework-v2.png" alt=""/>
+              <img src="static/images/framework.png" alt=""/>
               <tr>
                 <td colspan="3">
                   <p>
-                    We integrate the ST-Layout Attn within the frozen SD in the denoising
-                    process. In the self-attention layer, we compute the positive/negative value of each query token in
-                    different attributes from a spatial-temporal perspective, This allows us to augment the attention
-                    scores for tokens within the same attribute and reduce them for tokens in different attributes.
-                    In the cross-attention layer, we extract each attribute’s text embeddings from the edit prompt,
-                    ensuring they focus only on corresponding layouts across frames.<br/>
+                    (1) we integrate ST-Layout Attn into the frozen SD for multigrained
+                    editing, where we modulate self- and cross-attention in a unified manner. 
+                    (2) In crossattention, we view each local prompt and its location as positive pairs, while the prompt and
+                    outside-location areas are negative pairs, enabling text-to-region control. 
+                    (3) In self-attention, we enhance positive awareness within intra-regions and restrict negative interactions between inter-regions
+                    across frames, making each query only attend to the target region and keep feature separation.<br/>
               </tr>
             </tbody>
           </table>
