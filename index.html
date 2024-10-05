@@ -176,27 +176,32 @@
     <div class="container">
       <div class="columns is-centered has-text-centered">
         <div class="column">
-          <h2 class="title is-3">EVA Editing Results (<a href="supplementary/eva_supp.html" style="color: green; text-decoration: none; font-style: italic;">Click for More Results</a>)</h2>
           <div class="content has-text-justified">
 
           <div class="has-text-centered">
-            <strong><a style="color: black;font-size: 30px; font-weight: bold;">1. Single-Object Multi-attribute Editing Results</a></strong>
+            <strong><a style="color: black;font-size: 30px; font-weight: bold;">1. Definition of Multi-grained Video Editing</a></strong>
           </div>
           <table width="1200" align="center" class="video-no-container">
             <tbody>
               <tr>
-                <th colspan="2" style="width: 300px;text-align: center;"> 
-                  man &rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Batman</a>, clay court &rarr; <a style="color: rgb(102, 178, 255); font-family: caveat; font-weight: bold;">snow covered court</a>, stone wall -> <a style="color: rgb(255, 153, 51); font-family: caveat; font-weight: bold;">an iced wall</a> 
+                <th colspan="1" style="width: 300px;text-align: center;"> 
                 </th>
-                <th colspan="2" style="width: 300px; text-align: center;"> 
-                  man &rarr; <a style="color: red; font-family: caveat; font-weight: bold;">Ironman</a>, ground &rarr; <a style="color: green; font-family: caveat; font-weight: bold;">grassland</a>
+                <th colspan="1" style="width: 300px;text-align: center;"> 
+                  <a style="color: #EA6B66; font-family: caveat; font-weight: bold;">Class Level </a>: Editing objects within the same class
+                   (changing two men to “Spiderman",where both belong to the human class)
+                </th>
+                <th colspan="1" style="width: 300px;text-align: center;"> 
+                  <a style="color: #0066CC; font-family: caveat; font-weight: bold;">Instance Level</a>: Editing each individual instance to distinct object
+                </th>
+                <th colspan="1" style="width: 300px; text-align: center;"> 
+                  <a style="color: #4C7C31; font-family: caveat; font-weight: bold;">Part Level</a>: Applying part-level edit to specific elements of individual instances.
                 </th>
               </tr>
               <tr>
-                <th><video id="master1" width="300" src="supplementary/qualitative_results/single_object/tennis_source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master1" width="300" src="supplementary/qualitative_results/single_object/tennis_3.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master1" width="300" src="supplementary/qualitative_results/single_object/parour_source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
-                <th><video data-master-id="master1" width="300" src="supplementary/qualitative_results/single_object/parour_2cls.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video id="master1" width="300" src="supplementary/st-modulator/run_two_man/source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master1" width="300" src="supplementary/st-modulator/run_two_man/class_level.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master1" width="300" src="supplementary/st-modulator/run_two_man/instance_level.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master1" width="300" src="supplementary/st-modulator/run_two_man/part_level.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
               </tr>
             </tbody>
           </table>
