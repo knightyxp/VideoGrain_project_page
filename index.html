@@ -653,10 +653,10 @@
               <tr>
                 <th colspan="1" style="width: 300px;text-align: center;"></th>
                 <th colspan="1" style="width: 300px;text-align: center;"> 
-                Left man &rarr; <a style="color: #FF0000; font-family: caveat; font-weight: bold;"> Iron Man</a>
+                 left man &rarr; <a style="color: #FF0000; font-family: caveat; font-weight: bold;"> Iron Man</a>
                 </th>
                 <th colspan="1" style="width: 300px;text-align: center;"> 
-                  Right man &rarr; <a style="color: #6094D4; font-family: caveat; font-weight: bold;">Spider Man</a>
+                  right man &rarr; <a style="color: #6094D4; font-family: caveat; font-weight: bold;">Spider Man</a>
                 </th>
                 <th colspan="1" style="width: 300px; text-align: center;"> 
                   left&rarr; <a style="color: #EA6B66; font-family: caveat; font-weight: bold;">Iron Man</a>+
@@ -681,7 +681,7 @@
             <table style="font-size: 12px;" width="1800" align="center" class="video-no-container">
               <tbody>
                 <tr>
-                  <th><video data-master-id="master15" width="300" src="./supplementary/ablation_study/videop2p/" autoplay="" loop="" controls="" muted=""> </video> </th>
+                  <th><video data-master-id="master15" width="300" src="./supplementary/ablation_study/part_level_modification/man_text_message.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
                   <th><video data-master-id="master15" width="300" src="./supplementary/ablation_study/part_level_modification/blue_shirt.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
                   <th><video data-master-id="master15" width="300" src="./supplementary/ablation_study/part_level_modification/black_suit.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
                   <th><video data-master-id="master15" width="300" src="./supplementary/ablation_study/part_level_modification/cat_flower.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
@@ -696,7 +696,7 @@
                   <th style="width: 300px; text-align: center; white-space: normal;">
                     half-sleeve gray shirt&rarr; <a style="color: #FF3333; font-family: caveat; font-weight: bold;">a black suit</a> 
                   </th>
-                  <th style="width: 300px; text-align: center; white-space: normal;">Source video</th>
+                  <th style="width: 300px; text-align: center; white-space: normal;">source video</th>
                   <th style="width: 300px; text-align: center; white-space: normal;">
                    head color: black&rarr; <a style="color: #FF0000; font-family: caveat; font-weight: bold;">ginger</a>,
                   </th>
@@ -725,8 +725,8 @@
                   <th colspan="4" style="text-align: center;"> 
                    Source prompt: red man and gray man are jogging under green trees <br>
                    Edit prompt: <a style="color: #EA6B66; font-family: caveat; font-weight: bold;">Spider Man</a> and <a style="color: #6094D4; font-family: caveat; font-weight: bold;">Polar Bear</a> 
-                   are jogging under <a style="color: #4C7C31; font-family: caveat; font-weight: bold;">cherry blossoms</a>. 
-                   VideoP2P setting: Attention Replace 3 subject words + Attention Reweight (Spider man: 4, Polar Bear: 4,Cherry Blossoms:2)
+                   are jogging under <a style="color: #4C7C31; font-family: caveat; font-weight: bold;">cherry blossoms</a> <br>
+                   VideoP2P setting: Attention Replace 3 subject words + Attention Reweight (Spider man: 4, polar bear: 4,cherry blossoms:2)
                   </th>
                 </tr>
                 <tr>
@@ -776,10 +776,133 @@
                 </tr>                
               </tbody>
             </table>
+            <div class="has-text-centered">
+              <strong><a style="color: black; font-size: 30px; font-weight: bold;" id="P2P Visual Evidence">Difference between P2P and ST-Modulator</a></strong>
+            </div>
+            <table style="font-size: 12px;" width="1800" align="center" class="video-no-container">
+              <tbody>
+                <tr>
+                  <th><video data-master-id="master6" width="300" src="./supplementary/ablation_study/videop2p/videop2p_3cls_spider_iron_cherry.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                  <th><video data-master-id="master6" width="1500" src="./supplementary/ablation_study/videop2p/videop2p_joint_edit_cross_attn.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                </tr>
+                <tr>
+                  <th style="width: 300px; text-align: center; white-space: normal;">videoP2P joint editing result</th>
+                  <th style="width: 300px; text-align: center; white-space: normal;">
+                    VideoP2P cross attention visualization
+                  </th>
+                </tr>
+                <tr>
+                  <th><video data-master-id="master6" width="300" src="./supplementary/ablation_study/videop2p/our_3cls_edit.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                  <th><video data-master-id="master6" width="1500" src="./supplementary/ablation_study/videop2p/our_cross_attn.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                </tr>
+                <tr>
+                  <th style="width: 300px; text-align: center; white-space: normal;">ST-Modulator joint editing result</th>
+                  <th style="width: 300px; text-align: center; white-space: normal;">
+                    ST-Modualtor cross attention visualization
+                  </th>
+                </tr>            
+              </tbody>
+            </table>
          </div>
        </div>
      </div>
    </div>
+</section>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3" id="temporal focus">Temporal Focus of ST-Layout Attn </h2>
+          <div class="content has-text-justified">
+          <tr>
+            <th colspan="4" style="text-align: center;"> 
+              <a style="color: #EA6B66; font-family: caveat; font-weight: bold;">Iron Man</a> and <a style="color: #6094D4; font-family: caveat; font-weight: bold;">Spiderman</a> 
+              are jogging under <a style="color: #4C7C31; font-family: caveat; font-weight: bold;">green trees</a> 
+            </th>
+          </tr>
+          <table width="1200" align="center" class="video-no-container" style="border-collapse: collapse; border-spacing: 0; border: none;" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <th><video id="master14" width="300" src="supplementary/ablation_study/temporal_focus/source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master14" width="300" src="supplementary/ablation_study/temporal_focus/per-frame.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master14" width="300" src="supplementary/ablation_study/temporal_focus/sparse_casual.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master14" width="300" src="supplementary/ablation_study/temporal_focus/ours.mp4" loop="" controls="" muted=""> </video> </th>
+              </tr>
+              <tr>
+                <th colspan="1" style="width: 300px;text-align: center;">source video</th>
+                <th colspan="1" style="width: 300px;text-align: center;"> 
+                    Per-frame ST-Layout Attn
+                </th>
+                <th colspan="1" style="width: 300px;text-align: center;"> 
+                   Sparse-Casual ST-Layout Attn <br>
+                   (first frame + previous frmae)
+                </th>
+                <th colspan="1" style="width: 300px; text-align: center;"> 
+                   Full frames ST-Layout Attn
+                </th>
+              </tr>
+            </tbody>
+          </table>
+          <div class="has-text-centered">
+            <strong><a style="color: black; font-size: 30px; font-weight: bold;" id="ControlNet ablation">ControlNet ablatio</a></strong>
+          </div>
+          <tr>
+            <th colspan="4" style="text-align: center;"> 
+              <div class="has-text-centered" >Edit Prompt: "A <a style="color: red; font-family: caveat; font-size: 15px; font-weight: bold;">Batman</a> is playing tennis on 
+                <a style="color: rgb(102, 178, 255); font-family: caveat; font-size: 15px; font-weight: bold;">snow covered court </a> before
+                 <a style="color: rgb(255, 217, 102); font-family: caveat; font-size: 15px; font-weight: bold;"> an iced wall</a>"
+            </th>
+          </tr>
+          <table width="1200" align="center" class="video-no-container" style="border-collapse: collapse; border-spacing: 0; border: none;" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <th><video id="master14" width="400" src="supplementary/ablation_study/controlnet_ablation/source_video.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master14" width="400" src="supplementary/ablation_study/controlnet_ablation/wo_controlnet.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master14" width="400" src="supplementary/ablation_study/controlnet_ablation/ours.mp4" loop="" controls="" muted=""> </video> </th>
+              </tr>
+              <tr>
+                <th colspan="1" style="width: 400px;text-align: center;">source video</th>
+                <th colspan="1" style="width: 400px;text-align: center;"> 
+                    Without ControlNet pose condition
+                </th>
+                <th colspan="1" style="width: 400px;text-align: center;"> 
+                    With ControlNet pose condition
+                </th>
+              </tr>
+            </tbody>
+          </table>
+          <div class="has-text-centered">
+            <strong><a style="color: black; font-size: 30px; font-weight: bold;" id="Without SAM-Track">Without SAM-Track masks</a></strong>
+          </div>
+          <table width="1200" align="center" class="video-no-container" style="border-collapse: collapse; border-spacing: 0; border: none;" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <th><video id="master14" width="300" src="supplementary/ablation_study/wo_sam_track_mask/tennis.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master14" width="300" src="supplementary/ablation_study/wo_sam_track_mask/cluster_mask.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master14" width="300" src="supplementary/ablation_study/wo_sam_track_mask/cluster_mask_result.mp4" autoplay="" loop="" controls="" muted=""> </video> </th>
+                <th><video data-master-id="master14" width="300" src="supplementary/ablation_study/wo_sam_track_mask/tennis_3.mp4" loop="" controls="" muted=""> </video> </th>
+              </tr>
+              <tr>
+                <th colspan="1" style="width: 300px;text-align: center;">source video</th>
+                <th colspan="1" style="width: 300px;text-align: center;"> 
+                    Cluster Masks from DDIM Inversion self attention
+                </th>
+                <th colspan="1" style="width: 300px;text-align: center;"> 
+                    Cluter mask result
+                </th>
+                <th colspan="1" style="width: 300px; text-align: center;"> 
+                    SAM-Track mask result
+                </th>
+              </tr>
+            </tbody>
+          </table>
+  
+      </div>
+    </div>
+  </div>
+</div>
 </section>
 
 
