@@ -88,7 +88,7 @@
   </div>
 </section>
 
-<h2>Outline</h2>
+<!-- <h2>Outline</h2>
 <ul>
     <li><a href="#Teaser Video">Teaser Video</a></li>
     <li><a href="#Abstract">Abstract</a></li>
@@ -109,7 +109,7 @@
       <li><a href="#temporal focus">Per-frame vs Sparse Causal vs Ours in ST-Layout Attn</a></li>  
       <li><a href="#ControlNet Abalation">ControlNet Abalation</a></li>
       <li><a href="#ST-Modulator without SAM-Track Mask">ST-Modulator without SAM-Track Masks</a></li>
-</ul>
+</ul> -->
 
 <!-- Teaser video-->
 <section class="hero teaser">
@@ -127,7 +127,7 @@
 <!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <h2 id="Teaser Video">Teaser Video</h2>
+    <h2 class="title is-3" id="Abstract">Abstract</h2>
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <source src="./static/480p_normal_hevc.mp4" type="video/mp4">
@@ -143,7 +143,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 id="Abstract">Abstract</h2>
+        <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
             Recent advancements in diffusion models have significantly improved video generation and editing capabilities. However, multi-grained video editing, which encompasses class-level, instance-level, and part-level modifications, remains a formidable challenge.
@@ -167,7 +167,7 @@
     <div class="container">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="Method">Method</h2>
+          <h2 class="title is-3">Method</h2>
           <div class="content has-text-justified">
           <table width="1200" border="0">
             <tbody>
@@ -197,7 +197,7 @@
     <div class="container">
       <div class="columns is-centered has-text-centered">
         <div class="column">
-          <h2 id="Definition"> Definition of Multi-grained Video Editing</h2>
+          <h2 class="title is-3"> Definition of Multi-grained Video Editing</h2>
           <div class="content has-text-justified">
           <!-- <div class="has-text-centered">
             <strong><a style="color: black;font-size: 30px; font-weight: bold;">Definition of Multi-grained Video Editing</a></strong>
@@ -285,15 +285,13 @@
     <div class="container">
       <div class="columns is-centered has-text-centered">
         <div class="column">
-          <h2 id="ST-Modulator Editing Results">ST-Modulator Editing Results </h2>
+          <h2 class="title is-3">ST-Modulator Editing Results </h2>
 
           <div class="content has-text-justified">
-            <h3 id="Instance Level" align="center">
-              <div class="has-text-centered">
-                <strong><a style="color: black; font-size: 30px; font-weight: bold;">1. Instance Level</a></strong>
-              </div>
-            </h3>
 
+            <div class="has-text-centered">
+              <strong><a style="color: black; font-size: 30px; font-weight: bold;">1. Instance Level</a></strong>
+            </div>
             <table style="font-size: 12px; table-layout: fixed;" width="1800" align="center" class="video-no-container">
               <tbody>
                 <tr>
@@ -392,11 +390,10 @@
               
               </tbody>
             </table>
-            <h3 id="Part Level" align="center">
+            
             <div class="has-text-centered">
               <strong><a style="color: black; font-size: 30px; font-weight: bold;">2. Part Level</a></strong>
             </div>
-            </h3>
             <table style="font-size: 12px;" width="1800" align="center" class="video-no-container">
               <tbody>
                 <tr>
@@ -429,11 +426,9 @@
                 </tr>                
               </tbody>
             </table>
-            <h3 id="Instance Level" align="center">
             <div class="has-text-centered">
               <strong><a style="color: black; font-size: 30px; font-weight: bold;">3. Class Level</a></strong>
             </div>
-            </h3>
             <table style="font-size: 12px;" width="1500" align="center" class="video-no-container">
               <tbody>
                 <tr>
@@ -499,7 +494,7 @@
 <section class="section hero is-light">
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
-      <h2 id="Comparison">Comparison with other video editing methods</h2>
+      <h2 class="title is-3">Comparison with other video editing methods</h2>
 
       <table style="table-layout: fixed; width: 100%;" align="center">
         <thead>
